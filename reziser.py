@@ -48,7 +48,7 @@ def resize_image(input_path: str, output_path: str = None) -> bool:
         new_height = int(original_height * scale)
         
         # Resize the image using high-quality resampling
-        resized_img = img.resize((new_width, new_height), Image.LANCZOS)
+        resized_img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
         
         # Determine if we should use transparent or black background
         # Use transparent for images with alpha channel, black otherwise
